@@ -53,7 +53,7 @@ export const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative w-full min-h-[100dvh] sm:min-h-[calc(100vh-80px)] lg:min-h-[calc(100vh-100px)] min-h-[600px] flex items-center justify-start overflow-hidden border-b border-slate-800 bg-slate-950 py-16 sm:py-24 lg:py-28">
+    <section className="relative w-full min-h-[100dvh] sm:min-h-[calc(100vh-80px)] lg:min-h-[calc(100vh-100px)] min-h-[600px] flex items-center justify-center overflow-hidden border-b border-slate-800 bg-slate-950 py-16 sm:py-24 lg:py-28">
       
       {/* 1. FULL-BLEED BACKGROUND IMAGE WITH SUBTLE PARALLAX */}
       <div 
@@ -70,9 +70,10 @@ export const Hero: React.FC = () => {
         />
       </div>
 
-      {/* 2. LIGHT DIRECTIONAL GRADIENT OVERLAY (PRESERVES BRIGHT WELL-LIT FACILITY & REFLECTIVE FLOOR) */}
-      <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-r from-slate-950/50 via-slate-950/20 via-45% to-transparent" />
-      <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-b from-slate-950/25 via-transparent via-50% to-slate-950/35" />
+      {/* 2. CENTER-WEIGHTED RADIAL & VERTICAL GRADIENT SCRIM (ENSURES EXCELLENT TEXT LEGIBILITY OVER RACKING) */}
+      <div className="absolute inset-0 z-10 pointer-events-none bg-slate-950/30" />
+      <div className="absolute inset-0 z-10 pointer-events-none bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-950/85 via-slate-950/50 to-slate-950/30" />
+      <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-b from-slate-950/50 via-transparent via-50% to-slate-950/60" />
 
       {/* 3. FULL-BLEED METALLIC ROLLER DOOR SHUTTER OVERLAY (DOOR-LIFT ANIMATION) */}
       <div
@@ -98,39 +99,39 @@ export const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* 4. LEFT-ALIGNED HERO OVERLAID TEXT CONTENT BLOCK (IN THE PHOTO'S CALM CORRIDOR ZONE) */}
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      {/* 4. CENTER-ALIGNED HERO OVERLAID TEXT CONTENT BLOCK */}
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex justify-center">
         <div
-          className={`max-w-xl lg:max-w-2xl text-left space-y-6 sm:space-y-7 transition-all duration-700 ease-out ${
+          className={`max-w-2xl lg:max-w-3xl text-center space-y-6 sm:space-y-7 transition-all duration-700 ease-out ${
             contentVisible || reducedMotion
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-6 pointer-events-none'
           }`}
         >
-          {/* Confident Left-Aligned Headline */}
+          {/* Confident Centered Headline */}
           <h1 
-            className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.12] text-left"
-            style={{ textShadow: '0 2px 14px rgba(0, 0, 0, 0.95), 0 4px 28px rgba(0, 0, 0, 0.9), 0 1px 3px rgba(0,0,0,1)' }}
+            className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.12] text-center"
+            style={{ textShadow: '0 2px 16px rgba(0, 0, 0, 0.95), 0 4px 32px rgba(0, 0, 0, 0.9), 0 1px 3px rgba(0,0,0,1)' }}
           >
             {content.hero.titleLine1}{' '}
             <span 
-              className="block text-[#2563EB] sm:text-[#1B4FA3] mt-1.5 sm:mt-2.5 font-black"
-              style={{ textShadow: '0 2px 12px rgba(0, 0, 0, 0.95), 0 0 20px rgba(0, 0, 0, 0.9), 0 1px 3px rgba(0,0,0,1)' }}
+              className="block text-[#3B82F6] sm:text-[#60A5FA] mt-1.5 sm:mt-2.5 font-black"
+              style={{ textShadow: '0 2px 16px rgba(0, 0, 0, 0.95), 0 0 24px rgba(0, 0, 0, 0.95), 0 1px 3px rgba(0,0,0,1)' }}
             >
               {content.hero.titleLine2}
             </span>
           </h1>
 
-          {/* Left-Aligned Subheadline */}
+          {/* Centered Subheadline */}
           <p 
-            className="text-base sm:text-xl lg:text-2xl text-slate-100 font-medium max-w-xl text-left leading-relaxed"
-            style={{ textShadow: '0 2px 12px rgba(0, 0, 0, 0.95), 0 1px 4px rgba(0, 0, 0, 0.9)' }}
+            className="text-base sm:text-xl lg:text-2xl text-slate-100 font-medium max-w-2xl mx-auto text-center leading-relaxed"
+            style={{ textShadow: '0 2px 14px rgba(0, 0, 0, 0.95), 0 1px 4px rgba(0, 0, 0, 0.9)' }}
           >
             {content.hero.subheadline}
           </p>
 
-          {/* Left-Aligned CTAs */}
-          <div className="pt-3 sm:pt-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-start gap-3.5 sm:gap-4 max-w-md sm:max-w-none">
+          {/* Centered CTAs */}
+          <div className="pt-3 sm:pt-4 flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 max-w-md sm:max-w-none mx-auto">
             {/* Primary CTA: Dominant, bold, solid brand blue fill */}
             <a
               href="#devis"
@@ -143,7 +144,7 @@ export const Hero: React.FC = () => {
             {/* Secondary CTA: Visually lighter, thin border, transparent blur backdrop */}
             <a
               href="#devis"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 sm:py-4 rounded-xl border border-white/50 hover:border-white/90 bg-slate-950/40 hover:bg-slate-950/60 text-slate-100 hover:text-white font-semibold text-sm sm:text-base transition-all backdrop-blur-md hover:scale-[1.01] active:scale-[0.99] shrink-0"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 sm:py-4 rounded-xl border border-white/50 hover:border-white/90 bg-slate-950/50 hover:bg-slate-950/70 text-slate-100 hover:text-white font-semibold text-sm sm:text-base transition-all backdrop-blur-md hover:scale-[1.01] active:scale-[0.99] shrink-0"
             >
               {content.hero.ctaSecondary}
             </a>
@@ -152,10 +153,10 @@ export const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* 5. SUBTLE BOTTOM SCROLL INDICATOR TO ANCHOR VERTICAL SPACE */}
+      {/* 5. SUBTLE BOTTOM SCROLL INDICATOR TO ANCHOR VERTICAL SPACE (CENTERED) */}
       <a 
         href="#solutions" 
-        className="absolute bottom-6 sm:bottom-8 left-4 sm:left-6 lg:left-8 z-20 inline-flex items-center gap-2.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-300/80 hover:text-white transition-colors group cursor-pointer"
+        className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 z-20 inline-flex items-center gap-2.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-300/80 hover:text-white transition-colors group cursor-pointer"
       >
         <span className="w-2 h-2 rounded-full bg-[#1B4FA3] animate-pulse" />
         <span className="group-hover:translate-x-0.5 transition-transform">{content.header.nav.solutions}</span>
