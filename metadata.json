@@ -1,0 +1,6 @@
+{
+  "name": "Promotion Crinab - Entrepôt Frigorifique Rabat",
+  "description": "Leader de l'entreposage frigorifique sous température contrôlée (froid positif, froid négatif, stockage sec) à Rabat (Lot 54, TouchMark) pour les professionnels et industriels.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

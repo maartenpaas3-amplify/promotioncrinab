@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-brand: #1B4FA3;
+    --color-brand-hover: #153E82;
+    --color-brand-light: #EEF4FC;
+    --color-brand-border: #C7D9F5;
+    --color-brand-focus: rgba(27, 79, 163, 0.25);
+    
+    --color-bg-canvas: #FFFFFF;
+    --color-bg-subtle: #FAFAFA;
+    --color-bg-muted: #F1F5F9;
+    
+    --color-text-main: #1A1A1A;
+    --color-text-muted: #475569;
+    --color-text-light: #64748B;
+    
+    --color-border: #E2E8F0;
+    --color-border-dark: #CBD5E1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--color-text-main);
+    background-color: var(--color-bg-canvas);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F8FAFC;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94A3B8;
+  }
+}
+
+/* Hide scrollbar for horizontal tabs while retaining scrollability */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Metal roller door shutter texture effect */
+.roller-shutter-panel {
+  background: linear-gradient(
+    180deg,
+    #E2E8F0 0%,
+    #F1F5F9 25%,
+    #CBD5E1 50%,
+    #E2E8F0 75%,
+    #94A3B8 100%
+  );
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 -1px 2px rgba(0, 0, 0, 0.15);
+}
