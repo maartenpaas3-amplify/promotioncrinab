@@ -107,12 +107,12 @@ export const Header: React.FC = () => {
             }}
           />
           <div className="flex flex-col justify-center leading-none">
-            <span className="font-extrabold tracking-tight text-sm sm:text-lg">
+            <span className="font-black tracking-tight text-base sm:text-lg lg:text-xl whitespace-nowrap">
               <span className="text-slate-900">PROMOTION </span>
               <span className="text-[#1B4FA3]">CRINAB</span>
             </span>
-            <span className="hidden sm:block text-[10px] text-slate-500 font-semibold tracking-wider uppercase mt-0.5">
-              Entreposage Frigorifique
+            <span className="hidden sm:block text-[10px] sm:text-[11px] text-slate-500 font-semibold tracking-wider uppercase mt-0.5 whitespace-nowrap">
+              {(content.header as any).taglineShort || "Entreposage Frigorifique"}
             </span>
           </div>
         </a>

@@ -4,6 +4,7 @@ export const contentEN: ContentFR = {
   header: {
     brandName: "Promotion Crinab",
     tagline: "Cold Storage & Industrial Logistics — Rabat",
+    taglineShort: "Cold Storage",
     nav: {
       hero: "Home",
       solutions: "Storage Solutions",

@@ -5,6 +5,7 @@ export const contentAR: ContentFR = {
   header: {
     brandName: "بروموسيون كريناب",
     tagline: "التخزين التبريدي واللوجستيك الصناعي — الرباط",
+    taglineShort: "تخزين تبريدي",
     nav: {
       hero: "الرئيسية",
       solutions: "حلول التخزين",

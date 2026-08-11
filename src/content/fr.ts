@@ -4,6 +4,7 @@ export const contentFR = {
   header: {
     brandName: "Promotion Crinab",
     tagline: "Entreposage Frigorifique & Logistique Industrielle — Rabat",
+    taglineShort: "Entreposage Frigorifique",
     nav: {
       hero: "Accueil",
       solutions: "Solutions de Stockage",
