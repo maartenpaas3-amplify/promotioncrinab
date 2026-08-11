@@ -62,21 +62,29 @@ export const WhyChooseUs: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="bg-white rounded-2xl border border-slate-200/90 p-5 sm:p-6 shadow-sm hover:shadow-md transition-all relative overflow-hidden group"
+                className="bg-gradient-to-br from-white via-slate-50/90 to-blue-50/30 rounded-2xl border border-slate-200/90 p-4 sm:p-6 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 relative overflow-hidden group flex flex-col justify-between"
               >
-                <div className="absolute top-0 right-0 w-24 h-24 bg-blue-50/50 rounded-full blur-xl group-hover:bg-blue-100/60 transition-all pointer-events-none" />
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-3xl sm:text-4xl font-black text-[#1B4FA3] tracking-tight font-mono">
-                    {st.value}
-                  </span>
-                  <div className="p-2.5 rounded-xl bg-blue-50 text-[#1B4FA3] border border-blue-100">
-                    <IconComp className="w-5 h-5" />
+                {/* Subtle Brand Ambient Glow */}
+                <div className="absolute -top-6 -right-6 w-28 h-28 bg-[#1B4FA3]/10 rounded-full blur-xl group-hover:bg-[#1B4FA3]/20 transition-all pointer-events-none" />
+                
+                {/* Bottom Brand Accent Bar */}
+                <div className="absolute bottom-0 inset-x-0 h-1 bg-gradient-to-r from-[#1B4FA3] via-blue-500 to-[#1B4FA3] rounded-b-2xl opacity-90 group-hover:opacity-100 transition-opacity" />
+
+                <div>
+                  <div className="flex items-center justify-between gap-2 mb-3">
+                    <span className="whitespace-nowrap font-black text-[#1B4FA3] text-2xl min-[380px]:text-3xl lg:text-3xl xl:text-4xl tracking-tight leading-none">
+                      {st.value}
+                    </span>
+                    <div className="p-2 sm:p-2.5 rounded-xl bg-gradient-to-br from-blue-50 to-blue-100/80 text-[#1B4FA3] border border-blue-200/80 shadow-2xs group-hover:scale-105 transition-transform shrink-0">
+                      <IconComp className="w-5 h-5" />
+                    </div>
                   </div>
+                  <p className="text-xs sm:text-sm font-bold text-slate-900 leading-snug">
+                    {st.label}
+                  </p>
                 </div>
-                <p className="text-sm font-bold text-slate-900 leading-snug">
-                  {st.label}
-                </p>
-                <p className="text-xs text-slate-500 mt-0.5 font-normal">
+
+                <p className="text-[11px] sm:text-xs text-slate-500 mt-1 font-normal leading-normal">
                   {st.sublabel}
                 </p>
               </div>
